@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head><meta charset="UTF-8"><title>Praktikum Mandiri - Pengolah Nilai Mahasiswa</title></head>
+<body>
+  <h2>Pengolah Nilai Mahasiswa</h2>
+  <p>Lihat hasil melalui Console (F12).</p>
+  <script>
+    function olahNilai(namaMhs, tugas, uts, uas) {
+      const nilaiAkhir = tugas * 0.30 + uts * 0.30 + uas * 0.40;
+      let status;
+      if (nilaiAkhir >= 60) {
+        status = "LULUS";
+      } else {
+        status = "TIDAK LULUS";
+      }
+      console.log("Nama mahasiswa:", namaMhs);
+      console.log("Nilai akhir:", nilaiAkhir);
+      console.log("Status kelulusan:", status);
+      console.log("----------------------");
+    }
+
+    // Contoh pengujian dari modul: Tugas 80, UTS 70, UAS 90 -> 81 -> LULUS
+    olahNilai("Zulfikar Syauki Nur", 80, 70, 90);
+
+    // Pengujian tambahan: kasus TIDAK LULUS
+    olahNilai("Zulfikar Syauki Nur", 50, 40, 60);
+  </script>
+</body>
+</html>
